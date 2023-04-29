@@ -2,26 +2,309 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Imprt Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Remove Arrow For number input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Slider Bullet Style */
+
+span.swiper-pagination-bullet {
+  background: white !important;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #ea580c !important;
+}
+
+/* Slider Arrow Style */
+
+.swiper-button-next {
+  color: #ea580c !important;
+}
+
+.swiper-button-prev {
+  color: #ea580c !important;
+}
+/* Acheivment Component Design */
+
+.acheivement-bg {
+  background-image: linear-gradient(
+      45deg,
+      rgba(14, 14, 14, 0.78),
+      rgba(14, 14, 14, 0.78)
+    ),
+    url("../Assests/Image/footer.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+  padding: 70px 0;
+}
+
+/* Testimonial Section Style */
+
+.testimonial-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.692)),
+    url(../Assests/Image/about-1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.item {
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  background-color: inherit;
+}
+
+.item .view {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.06);
+  transform-style: preserve-3d;
+  transition: 0.7s;
+  backface-visibility: hidden;
+  border-top: 2px solid #ddd;
+  border-left: 2px solid #ddd;
+  border-right: 0.5px solid #dddddd65;
+  border-bottom: 0.5px solid #dddddd65;
+}
+
+.item .view.front-view,
+.item .view.back-view {
+  position: absolute;
+}
+
+.item .view.front-view .profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.item:hover .view.front-view {
+  transform: rotateY(180deg);
+}
+
+.item .view.back-view {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.06);
+  transform: rotateY(180deg);
+  padding: 20px 30px;
+  user-select: none;
+}
+.item:hover .view.back-view {
+  transform: rotateY(360deg);
+}
+
+/* Galary Area Style */
+
+.galary-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.452)),
+    url(../Assests/Image/galary-bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Feedback Background */
+.feedback-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.789), rgba(0, 0, 0, 0.789)),
+    url(../Assests/Image/Dashboard/rateUs.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Footer Area Style */
+.footer-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.811), rgba(0, 0, 0, 0.811)),
+    url("../Assests/Image/footer-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+.footer-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.831), rgba(0, 0, 0, 0.831)),
+    url("../Assests/Image/footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+/*--------------> Dashboard All Pages Style Here <--------------- */
+
+/* Add Product Page Style */
+.add-Car-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.746), rgba(0, 0, 0, 0.733)),
+    url("../Assests/Image/Dashboard/addProduct.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding-bottom: 50px;
+}
+
+/* Dashboard Rating Style */
+.activeStyle {
+  color: #121c51;
+  background: #ffffff;
+  border: 2px solid #f2f6ff;
+  box-shadow: 0px 4px 4px rgba(164, 121, 255, 0.25),
+    0px 4px 17px rgba(255, 40, 40, 0.25);
+}
+
+/* Make Admin Background */
+.makeAdmin-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.81), rgba(0, 0, 0, 0.81)),
+    url(../Assests/Image/Dashboard/makeAdmin.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Dashboard Home Page Style */
+.dashborad-home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.692)),
+    url("../Assests/Image/footer-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+/* Scroll To Top Button Style */
+button.scroll-to-top {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: 1px solid orangered !important;
+  border-radius: 50% !important;
+  padding: 8px !important;
+  transition: ease-in-out 0.3s !important;
+}
+
+button.scroll-to-top:hover {
+  background-color: orangered !important;
+}
+
+/* Main Header Animation */
+.openAnimation {
+  animation: slide-from-top 0.6s ease-in-out;
+}
+
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-500%);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Dashboard sidebar Animation */
+.openSidebar {
+  animation: slide-from-left 0.6s ease-in-out;
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-500%);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* Deal Of The Day bg-shape */
+
+.bounce-animation {
+  animation: bounce 1.7s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+.bounce-animation2 {
+  animation: bounce2 1.5s ease infinite alternate;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translateX(-25px);
+  }
+
+  100% {
+    transform: translateX(25px);
+  }
+}
+.bounce-animation3 {
+  animation: bounce3 1.5s ease infinite alternate;
+}
+
+@keyframes bounce3 {
+  0% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+/* Our Service Section Style */
+
+.boxShadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #ea580c;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.5s ease-out;
+}
+.card:hover:before {
+  transform: scale(50);
+}
+.background-shape {
+  background-image: url("../Assests/Image/Others/shape.png");
+  background-repeat: no-repeat;
 }
