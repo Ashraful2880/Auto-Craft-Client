@@ -82,7 +82,7 @@ const Header = () => {
                     <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-orange-600 rounded-full group-hover:w-48 group-hover:h-56"></span>
                     <span className="absolute w-full h-full"></span>
                     <span className="relative group-hover:text-white transition duration-300 ease-in-out">
-                      Our Service
+                      Services
                     </span>
                   </Link>
                   <Link

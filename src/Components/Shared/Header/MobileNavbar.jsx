@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { AiOutlineLogin, AiOutlineLogout } from "react-icons/ai";
 import logo from "../../../Assests/Image/logo.png";
@@ -99,13 +99,13 @@ const MobileNavbar = () => {
                       className="text-lg text-white font-medium w-full px-3 py-2 my-3 border border-gray-500 rounded-md duration-300 focus:bg-orange-600 focus:border-orange-600"
                       onClick={() => setOpen(false)}
                     >
-                      <Link href="/ourServices">Our Services</Link>
+                      <Link href="/ourServices">Services</Link>
                     </button>
                     <button
                       className="text-lg text-white font-medium w-full px-3 py-2 my-3 border border-gray-500 rounded-md duration-300 focus:bg-orange-600 focus:border-orange-600"
                       onClick={() => setOpen(false)}
                     >
-                      <Link href="/branches">Our Branches</Link>
+                      <Link href="/branches">Branches</Link>
                     </button>
                     <button
                       className="text-lg text-white font-medium w-full px-3 py-2 my-3 border border-gray-500 rounded-md duration-300 focus:bg-orange-600 focus:border-orange-600"
