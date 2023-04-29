@@ -18,6 +18,7 @@ const ManageOrder = () => {
   const [ordersId, setOrdersId] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [id, setId] = useState("");
+  const [path, setPath] = useState("");
   const [updated, setUpdated] = useState(0);
   const [showModal, setShowModal] = useState("");
 
@@ -72,6 +73,7 @@ const ManageOrder = () => {
   const handleDelete = (id) => {
     setShowModal("delete");
     setId(id);
+    setPath("deleteOrder");
   };
 
   return (
@@ -192,6 +194,7 @@ const ManageOrder = () => {
           {showModal === "delete" && (
             <DeleteOrder
               id={id}
+              path={path}
               setShowModal={setShowModal}
               updated={updated}
               setUpdated={setUpdated}

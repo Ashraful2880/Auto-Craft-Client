@@ -15,6 +15,7 @@ const MyOrder = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState("");
   const [id, setId] = useState("");
+  const [path, setPath] = useState("");
   const [ordersId, setOrdersId] = useState();
   const [orderDetails, setOrderDetails] = useState();
 
@@ -67,6 +68,7 @@ const MyOrder = () => {
   const handleDelete = (id) => {
     setShowModal("delete");
     setId(id);
+    setPath("deleteOrder");
   };
 
   return (
@@ -189,6 +191,7 @@ const MyOrder = () => {
         {showModal === "delete" && (
           <DeleteOrder
             id={id}
+            path={path}
             setShowModal={setShowModal}
             updated={updated}
             setUpdated={setUpdated}

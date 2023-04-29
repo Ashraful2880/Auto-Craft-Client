@@ -11,6 +11,7 @@ import EditProduct from "@/Components/Dashboard/ManageProducts/EditProduct";
 const ManageProducts = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [id, setId] = useState();
+  const [path, setPath] = useState();
   const [updated, setUpdated] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [editModal, setEditModal] = useState(false);
@@ -28,6 +29,7 @@ const ManageProducts = () => {
   const handleDelete = (id) => {
     setShowModal(true);
     setId(id);
+    setPath("deleteProduct");
   };
 
   const handleEdit = (id) => {
@@ -122,6 +124,7 @@ const ManageProducts = () => {
         {showModal && (
           <DeleteOrder
             id={id}
+            path={path}
             setShowModal={setShowModal}
             updated={updated}
             setUpdated={setUpdated}

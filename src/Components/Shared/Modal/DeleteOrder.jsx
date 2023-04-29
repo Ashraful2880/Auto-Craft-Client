@@ -2,19 +2,14 @@ import axios from "axios";
 import React from "react";
 import { useAlert } from "react-alert";
 
-const DeleteOrder = ({
-  id,
-  setShowModal,
-  updated,
-  setUpdated,
-}) => {
+const DeleteOrder = ({ id, path, setShowModal, updated, setUpdated }) => {
   const alert = useAlert();
 
   // Delete An Order By ID
   const handleDelete = async () => {
     setShowModal("");
     await axios
-      .delete(`${process.env.NEXT_PUBLIC_HOST_URL}/deleteOrder/${id}`)
+      .delete(`${process.env.NEXT_PUBLIC_HOST_URL}/${path}/${id}`)
       .then((resp) => {
         if (resp?.data?.deletedCount > 0) {
           alert.success("Deleted Successful!");
