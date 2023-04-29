@@ -1,12 +1,13 @@
 import "@/styles/globals.css";
 import ScrollToTop from "react-scroll-to-top";
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Navbar from "@/Components/Shared/Header/Navbar";
-import TopHeader from "@/Components/Shared/Header/TopHeader";
 import Footer from "@/Components/Shared/Footer/Footer";
+import AuthProvider from "../../Context/AuthProvider";
 
 const options = {
   position: positions.TOP_RIGHT,
@@ -23,11 +24,13 @@ export default function App({ Component, pageProps }) {
   }, []);
   // AOS.init({ duration: 1000 });
   return (
-    <>
-      <ScrollToTop smooth />
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
-    </>
+    <AlertProvider template={AlertTemplate} {...options}>
+      <AuthProvider>
+        <ScrollToTop smooth />
+        <Navbar />
+        <Component {...pageProps} />
+        <Footer />
+      </AuthProvider>
+    </AlertProvider>
   );
 }

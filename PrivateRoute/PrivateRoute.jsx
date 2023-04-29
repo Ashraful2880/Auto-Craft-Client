@@ -1,10 +1,9 @@
 import CardLoading from "@/Components/Shared/Loading/CardLoading";
 import { useRouter } from "next/router";
-import useAuth from "../Hooks/UseAuth";
-
+import useFirebase from "../Hooks/UseFirebase";
 
 const PrivateRoute = ({ children }) => {
-  const { user, isloading } = useAuth();
+  const { user, isloading } = useFirebase();
   const router = useRouter();
 
   if (isloading) {

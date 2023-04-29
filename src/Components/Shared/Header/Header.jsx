@@ -11,7 +11,7 @@ import useFirebase from "../../../../Hooks/UseFirebase";
 
 const Header = () => {
   const router = useRouter();
-  // const { handleSignOut, user } = useFirebase();
+  const { handleSignOut, user } = useFirebase();
 
   return (
     <>
@@ -33,7 +33,7 @@ const Header = () => {
                 </div>
 
                 {/* Right column for menu */}
-                <div className="flex items-center gap-x-4">
+                <div className="flex items-center gap-x-2">
                   <Link
                     href="/"
                     className="relative justify-center px-3 py-1 overflow-hidden font-semibold rounded-[4px] group text-lg duration-300 flex items-center gap-x-1 hover:bg-white hover:text-orange-600 focus:text-orange-600 focus:border-orange-600"
@@ -124,19 +124,19 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className="flex items-center gap-x-2">
-                  {/* {user?.email && ( */}
-                    {/* <img
+                  {user?.email && (
+                    <img
                       className="w-9 h-9 rounded-full border border-orange-600"
                       src={user?.photoURL || avater}
                       alt="Profile"
-                    /> */}
-                  {/* )} */}
-                  {/* {user?.displayName && ( */}
-                    <p className="text-md font-semibold">user?.displayName</p>
-                  {/* )} */}
-                  {/* {user?.email ? ( */}
+                    />
+                  )}
+                  {user?.displayName && (
+                    <p className="text-md font-semibold">{user?.displayName}</p>
+                  )}
+                  {user?.email ? (
                     <button
-                      // onClick={handleSignOut}
+                      onClick={handleSignOut}
                       className="relative justify-center px-3 py-1 overflow-hidden font-semibold rounded-[4px] group text-lg duration-300 flex items-center gap-x-1 hover:bg-white hover:text-orange-600 focus:text-orange-600 focus:border-orange-600"
                     >
                       <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-orange-600 rounded-full group-hover:w-48 group-hover:h-56"></span>
@@ -146,7 +146,7 @@ const Header = () => {
                         <span>Logout</span>
                       </span>
                     </button>
-                  {/* ) : ( */}
+                  ) : (
                     <div className="flex items-center ml-4">
                       <Link
                         href="/login"
@@ -163,7 +163,7 @@ const Header = () => {
                         <span>Signup</span>
                       </Link>
                     </div>
-                  {/* )} */}
+                  )}
                 </div>
               </div>
             </nav>

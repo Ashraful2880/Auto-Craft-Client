@@ -5,11 +5,10 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { BsSendFill } from "react-icons/bs";
 import { FaTimes } from "react-icons/fa";
-import useFirebase from "@/Hooks/UseFirebase";
-
+import useAuth from "../../../Hooks/UseAuth";
 
 const Purchase = ({ setOrder, carDetails }) => {
-  const { user } = useFirebase();
+  const { user } = useAuth();
   const router = useRouter();
   const alert = useAlert();
 

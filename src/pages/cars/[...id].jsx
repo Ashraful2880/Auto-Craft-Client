@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import PrivateRoute from "@/PrivateRoute/PrivateRoute";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Image from "next/image";
@@ -14,6 +13,7 @@ import { IoLogoModelS } from "react-icons/io";
 import { BiColor } from "react-icons/bi";
 import Purchase from "./Purchase";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import PrivateRoute from "../../../PrivateRoute/PrivateRoute";
 
 const CarDetails = () => {
   const router = useRouter();
