@@ -1,6 +1,7 @@
 import About from "@/Components/About/About";
 import Achievment from "@/Components/Achievment/Achievment";
 import Bannar from "@/Components/Bannar/Bannar";
+import DealOfTheDay from "@/Components/DealOfTheDay/DealOfTheDay";
 import Discount from "@/Components/Discount/Discount";
 import Galary from "@/Components/Galary/Galary";
 import Testimonial from "@/Components/Testimonial/Testimonial";
@@ -22,7 +23,7 @@ const Home = () => {
       >
         <Achievment counterOn={counterOn} />
       </ScrollTrigger>
-      {/* <DealOfTheDay /> */}
+      <DealOfTheDay />
       <Testimonial />
       {/* <Blogs /> */}
     </main>
