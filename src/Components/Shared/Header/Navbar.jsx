@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import MobileNavbar from './MobileNavbar'
 // import MobileNavbar from './MobileNavbar'
 
 
@@ -7,7 +8,7 @@ const Navbar = () => {
   return (
     <div>
       <Header/>
-      {/* <MobileNavbar/> */}
+      <MobileNavbar/>
     </div>
   )
 }

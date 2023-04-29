@@ -6,12 +6,11 @@ import Image from "next/image";
 import avater from "../../../Assests/Image/avater.png";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
-import useFirebase from "@/Hooks/UseFirebase";
-import useAuth from "../../../../Hooks/UseAuth";
+import useFirebase from "../../../../Hooks/UseFirebase";
 
 const MobileNavbar = () => {
   const router = useRouter();
-  const { handleSignOut, user } = useAuth();
+  const { handleSignOut, user } = useFirebase();
   const [open, setOpen] = useState(false);
 
   const handleLogOut = () => {
