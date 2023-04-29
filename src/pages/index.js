@@ -1,22 +1,23 @@
+import About from "@/Components/About/About";
 import Bannar from "@/Components/Bannar/Bannar";
 
 export default function Home() {
   return (
     <main>
       <Bannar />
-      {/* <Cars />
+      {/* <Cars /> */}
         <About />
-        <Galary />
-        <Discount />
-        <ScrollTrigger
+        {/* <Galary /> */}
+        {/* <Discount /> */}
+        {/* <ScrollTrigger
           onEnter={() => setCounterOn(true)}
           onExit={() => setCounterOn(false)}
         >
           <Achievment counterOn={counterOn} />
-        </ScrollTrigger>
-        <DealOfTheDay />
-        <Testimonial />
-        <Blogs /> */}
+        </ScrollTrigger> */}
+        {/* <DealOfTheDay /> */}
+        {/* <Testimonial /> */}
+        {/* <Blogs /> */}
     </main>
   );
 }
