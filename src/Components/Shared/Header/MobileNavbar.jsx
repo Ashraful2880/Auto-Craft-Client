@@ -6,6 +6,7 @@ import Image from "next/image";
 import avater from "../../../Assests/Image/avater.png";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
+import useFirebase from "@/Hooks/UseFirebase";
 import useAuth from "../../../../Hooks/UseAuth";
 
 const MobileNavbar = () => {

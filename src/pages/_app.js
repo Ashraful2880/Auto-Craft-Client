@@ -25,8 +25,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <ScrollToTop smooth />
-      <TopHeader />
-      {/* <Navbar /> */}
+      <Navbar />
       <Component {...pageProps} />
       <Footer />
     </>
