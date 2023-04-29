@@ -1,23 +1,28 @@
 import About from "@/Components/About/About";
+import Achievment from "@/Components/Achievment/Achievment";
 import Bannar from "@/Components/Bannar/Bannar";
+import { useState } from "react";
+import ScrollTrigger from "react-scroll-trigger";
 
-export default function Home() {
+const Home = () => {
+  const [counterOn, setCounterOn] = useState(false);
   return (
     <main>
       <Bannar />
       {/* <Cars /> */}
-        <About />
-        {/* <Galary /> */}
-        {/* <Discount /> */}
-        {/* <ScrollTrigger
-          onEnter={() => setCounterOn(true)}
-          onExit={() => setCounterOn(false)}
-        >
-          <Achievment counterOn={counterOn} />
-        </ScrollTrigger> */}
-        {/* <DealOfTheDay /> */}
-        {/* <Testimonial /> */}
-        {/* <Blogs /> */}
+      <About />
+      {/* <Galary /> */}
+      {/* <Discount /> */}
+      <ScrollTrigger
+        onEnter={() => setCounterOn(true)}
+        onExit={() => setCounterOn(false)}
+      >
+        <Achievment counterOn={counterOn} />
+      </ScrollTrigger>
+      {/* <DealOfTheDay /> */}
+      {/* <Testimonial /> */}
+      {/* <Blogs /> */}
     </main>
   );
-}
+};
+export default Home;
