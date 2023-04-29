@@ -1,14 +1,22 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Bannar from '@/Components/Bannar/Bannar'
-
-const inter = Inter({ subsets: ['latin'] })
+import Bannar from "@/Components/Bannar/Bannar";
 
 export default function Home() {
   return (
     <main>
-     <Bannar />
-     
+      <Bannar />
+      {/* <Cars />
+        <About />
+        <Galary />
+        <Discount />
+        <ScrollTrigger
+          onEnter={() => setCounterOn(true)}
+          onExit={() => setCounterOn(false)}
+        >
+          <Achievment counterOn={counterOn} />
+        </ScrollTrigger>
+        <DealOfTheDay />
+        <Testimonial />
+        <Blogs /> */}
     </main>
-  )
+  );
 }
