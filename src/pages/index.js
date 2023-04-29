@@ -1,6 +1,7 @@
 import About from "@/Components/About/About";
 import Achievment from "@/Components/Achievment/Achievment";
 import Bannar from "@/Components/Bannar/Bannar";
+import Galary from "@/Components/Galary/Galary";
 import Testimonial from "@/Components/Testimonial/Testimonial";
 import { useState } from "react";
 import ScrollTrigger from "react-scroll-trigger";
@@ -12,7 +13,7 @@ const Home = () => {
       <Bannar />
       {/* <Cars /> */}
       <About />
-      {/* <Galary /> */}
+      <Galary />
       {/* <Discount /> */}
       <ScrollTrigger
         onEnter={() => setCounterOn(true)}
