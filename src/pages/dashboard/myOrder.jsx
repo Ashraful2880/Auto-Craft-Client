@@ -104,9 +104,7 @@ const MyOrder = () => {
                       >
                         <td className="p-5">{index + 1}</td>
                         <td className="p-5">{allOrders(order?.id)?.name}</td>
-                        <td className="p-5 flex flex-nowrap lg:w-full md:w-full w-[120px] justify-center">
-                          {allOrders(order?.id)?.model}
-                        </td>
+                        <td className="p-5">{allOrders(order?.id)?.model}</td>
                         <td className="p-5">
                           {allOrders(order?.id)?.modelYear}
                         </td>

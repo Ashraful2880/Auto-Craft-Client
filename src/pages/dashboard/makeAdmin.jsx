@@ -25,6 +25,7 @@ const MakeAdmin = () => {
         if (result.acknowledged) {
           alert.success("Admin Added Successful");
           setAdminEmail("");
+          event.target.reset;
         }
       });
   };

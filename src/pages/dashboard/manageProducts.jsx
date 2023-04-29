@@ -15,7 +15,6 @@ const ManageProducts = () => {
   const [showModal, setShowModal] = useState(false);
   const [editModal, setEditModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  // console.log("ID", id);
 
   useEffect(() => {
     setIsLoading(true);
@@ -28,8 +27,7 @@ const ManageProducts = () => {
   // Delete Order Detail Modal Function
   const handleDelete = (id) => {
     setShowModal(true);
-    const idObject = { path: "deleteProduct", id };
-    setId(idObject);
+    setId(id);
   };
 
   const handleEdit = (id) => {
