@@ -29,7 +29,6 @@ const useFirebase = () => {
   const [admin, setAdmin] = useState(null);
 
   // Signin With Google
-
   const googleSignIn = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
@@ -51,7 +50,6 @@ const useFirebase = () => {
   };
 
   // Create User With Email & Password
-
   const handleName = (event) => {
     const name = event.target.value;
     setName(name);
@@ -64,8 +62,7 @@ const useFirebase = () => {
     setPassword(event.target.value);
   };
 
-  //<-------------- RegisterUser --------------->
-
+  // Register User
   const handleRegister = (event) => {
     event.preventDefault();
     setIsLoading(true);
@@ -97,8 +94,7 @@ const useFirebase = () => {
       });
   };
 
-  // Handle Sign in Existing User
-
+  // Sign in Existing User
   const handleSignIn = (event) => {
     event.preventDefault();
     setIsLoading(true);
@@ -118,7 +114,6 @@ const useFirebase = () => {
   };
 
   // Handle Sign Out
-
   const handleSignOut = () => {
     setIsLoading(true);
     const auth = getAuth();
@@ -137,7 +132,6 @@ const useFirebase = () => {
   };
 
   // observe whether user auth state changed or not
-
   useEffect(() => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -150,8 +144,7 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, []);
 
-  //<----------- Save User Info To Database ---------->
-
+  //Save User Info To Database
   const saveUser = () => {
     const dbUser = { displayName: name, email: email };
     fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/users`, {
@@ -163,8 +156,7 @@ const useFirebase = () => {
       .then((result) => {});
   };
 
-  //<----------- Update User Info To Database ---------->
-
+  // Update User Info To Database
   const updateUser = (googleUser) => {
     // const dbUser={displayName:name,email:email}
     fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/users`, {

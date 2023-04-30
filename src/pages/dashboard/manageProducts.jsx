@@ -42,16 +42,10 @@ const ManageProducts = () => {
     <DashboardLayout>
       <AdminRoute>
         <div className="min-h-screen pb-12 lg:px-6 md:px-4 px-2 mx-auto">
-          {/* <h1 className="text-3xl py-4 font-semibold text-orange-600 mb-5">
-            Manage Products{" "}
-            <span className="text-gray-600">({allProducts?.length || 0})</span>
-            <div className="h-0.5 w-56 bg-orange-600 mt-3"></div>
-          </h1> */}
           <div className="text-start pt-4 pb-6">
             <h2 className="text-2xl font-bold font-[cursive]">
               Manage All
               <span className="text-orange-500">
-                {" "}
                 Products ({allProducts?.length || 0})
               </span>
             </h2>
