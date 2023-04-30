@@ -26,7 +26,7 @@ const useFirebase = () => {
   const [password, setPassword] = useState("");
   const [user, setUser] = useState("");
   const [isloading, setIsLoading] = useState(true);
-  const [admin, setAdmin] = useState("");
+  const [admin, setAdmin] = useState(null);
 
   // Signin With Google
 
@@ -182,10 +182,10 @@ const useFirebase = () => {
       axios
         .get(`${process.env.NEXT_PUBLIC_HOST_URL}/user/${user?.email}`)
         .then((resp) => {
-          setAdmin(resp?.data?.admin);
+          setAdmin(resp?.data);
         });
     }
-  }, [user?.email]);
+  }, [user]);
 
   return {
     handleEmail,

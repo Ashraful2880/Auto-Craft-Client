@@ -9,7 +9,7 @@ import useFirebase from "../../../../Hooks/UseFirebase";
 const DashboardHeader = ({ open, setOpen }) => {
   const { user, handleSignOut } = useFirebase();
   return (
-    <div className="mb-2">
+    <div className="lg:mb-16 md:mb-16 mb-2">
       <div className="h-16 text-white bg-gray-900 fixed left-0 top-0 w-full z-50 overflow-hidden flex items-center">
         <div className="flex justify-between items-center w-full">
           <div className="flex items-center gap-x-3">

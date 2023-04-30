@@ -32,13 +32,13 @@ const DashboardHome = () => {
           </h2>
           <p className="text-xl text-white text-center py-2">
             Your Current Role is
-            {admin === "false" ? (
+            {admin?.admin === true ? (
               <span className="text-2xl font-semibold text-orange-600 mx-2">
-                User
+                Admin
               </span>
             ) : (
               <span className="text-2xl font-semibold text-orange-600 mx-2">
-                Admin
+                User
               </span>
             )}
           </p>

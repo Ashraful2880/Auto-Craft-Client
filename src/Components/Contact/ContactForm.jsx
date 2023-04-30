@@ -12,7 +12,6 @@ const ContactForm = () => {
   } = useForm();
 
   const onSubmit = handleSubmit((data) => {
-    console.log(data);
     reset();
   });
 
