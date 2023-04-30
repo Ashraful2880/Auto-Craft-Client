@@ -85,7 +85,7 @@ const DealOfTheDay = () => {
             </div>
           </div>
           <div
-            className="w-full lg:mt-0 md:mt-0 mt-5"
+            className="w-full lg:mt-0 md:mt-0 mt-5 overflow-hidden"
             data-aos="zoom-in"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"

@@ -173,7 +173,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div>
+                <div className="lg:col-span-1 md:col-span-1 col-span-2 lg:px-0 mdpx-0 px-2">
                   <h1 className="text-white text-xl font-semibold lg:mb-8 mb-5 lg:text-left md:text-left text-center">
                     Recent Post
                   </h1>

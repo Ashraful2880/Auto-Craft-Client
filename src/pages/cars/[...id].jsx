@@ -36,7 +36,7 @@ const CarDetails = () => {
     <div>
       <PrivateRoute>
         {id ? (
-          <div className="container mx-auto min-h-screen">
+          <div className="container mx-auto min-h-screen lg:px-0 md:px-0 px-2">
             <div className="lg:px-20 px-0">
               <div className="w-full lg:flex block justify-between items-start gap-x-10 lg:pt-16 pt-5 pb-5">
                 <div className="w-full relative overflow-hidden">

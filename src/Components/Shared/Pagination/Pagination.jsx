@@ -7,8 +7,8 @@ const Pagination = ({
 }) => {
   return (
     <div>
-      <div className="hidden lg:flex md:flex lg:flex-1 md:flex-1 lg:items-center md:items-center lg:justify-between md:justify-between mb-8 pt-2">
-        <nav className="isolate flex -space-x-px justify-end w-full rounded-md gap-x-3">
+      <div className="flex lg:flex-1 md:flex-1 items-center justify-between mb-8 pt-2">
+        <nav className="isolate flex lg:justify-end md:justify-end justify-center w-full rounded-md gap-x-2">
           <button
             onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
             className="relative inline-flex items-center rounded-l-lg px-2 py-2 border border-gray-300 hover:bg-orange-600 hover:text-white hover:border-orange-600 focus:z-20 transition duration-300 ease-in-out"

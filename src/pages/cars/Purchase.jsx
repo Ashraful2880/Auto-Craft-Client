@@ -70,7 +70,7 @@ const Purchase = ({ setOrder, carDetails }) => {
               onSubmit={handleSubmit(onSubmit)}
               className="border shadow-md mt-5 lg:px-6 md:px-6 px-2 pt-4 pb-3"
             >
-              <div className="flex justify-between items-center gap-x-4 mb-5">
+              <div className="lg:flex md:flex block justify-between items-center gap-x-4 mb-5">
                 <div className="w-full">
                   <label
                     htmlFor="userName"
@@ -86,7 +86,7 @@ const Purchase = ({ setOrder, carDetails }) => {
                     required
                   />
                 </div>
-                <div className="w-full">
+                <div className="w-full lg:mt-0 md:mt-0 mt-3">
                   <label
                     htmlFor="number"
                     className="block mb-1 font-semibold text-gray-500"

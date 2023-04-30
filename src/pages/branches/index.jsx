@@ -30,7 +30,7 @@ const index = () => {
         <h2 className="text-xl text-center text-gray-400">our Branches</h2>
       </div>
       {branches?.length > 0 ? (
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 lg:gap-8 gap-6">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-6 lg:px-0 md:px-0 px-2">
           {branches?.map((branch, index) => (
             <div
               key={index + 1}

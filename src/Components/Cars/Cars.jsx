@@ -24,9 +24,7 @@ const Cars = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(
-        `${process.env.NEXT_PUBLIC_HOST_URL}/cars?page=${currentPage}`
-      )
+      .get(`${process.env.NEXT_PUBLIC_HOST_URL}/cars?page=${currentPage}`)
       .then((res) => {
         setAllCars(res?.data?.cars);
         setPaginationList(res?.data?.totalPaginate);
@@ -122,11 +120,13 @@ const Cars = () => {
                   </Link>
                 ))}
               </div>
-              <Pagination
+             <div>
+             <Pagination
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
                 paginationList={paginationList}
               />
+             </div>
             </>
           ) : (
             <div>

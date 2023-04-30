@@ -123,8 +123,8 @@ const index = () => {
               />
             </div>
           </div>
-          <button className="relative inline-block text-lg group mb-6">
-            <span className="relative z-10 block text-white lg:px-6 md:px-6 px-4 lg:py-3 md:py-2.5 overflow-hidden font-semibold leading-tight transition-colors duration-300 ease-out border-2 border-orange-600 hover:border-orange-600 rounded-lg group-hover:text-orange-600">
+          <button className="relative inline-block lg:text-lg md:text-lg text-sm group mb-6">
+            <span className="relative lg:z-10 md:z-10 z-0 block text-white lg:px-6 md:px-6 px-4 lg:py-3 md:py-2.5 overflow-hidden font-semibold leading-tight transition-colors duration-300 ease-out border-2 border-orange-600 hover:border-orange-600 rounded-lg group-hover:text-orange-600 py-2.5">
               <span className="absolute inset-0 w-full h-full px-5 py-3 bg-orange-600"></span>
               <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-white group-hover:-rotate-180 ease"></span>
               <span className="relative flex items-center gap-x-2">
@@ -133,7 +133,7 @@ const index = () => {
               </span>
             </span>
             <span
-              className="absolute bottom-0 right-0 w-full h-12 -mb-2 -mr-2 transition-all duration-200 ease-linear bg-black rounded-lg group-hover:mb-0 group-hover:mr-0"
+              className="absolute bottom-0 right-0 w-full h-12 -mb-2 -mr-2 transition-all duration-200 ease-linear bg-black rounded-lg group-hover:mb-0 group-hover:mr-0 lg:block md:block hidden"
               data-rounded="rounded-lg"
             ></span>
           </button>

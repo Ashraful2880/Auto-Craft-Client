@@ -7,7 +7,7 @@ import { BsClock } from "react-icons/bs";
 
 const index = () => {
   return (
-    <div className="min-h-screen h-auto">
+    <div className="min-h-screen h-auto lg:pz-0 md:px-0 px-2">
       <div className="text-center lg:py-6 md:py-3 py-0 container mx-auto">
         <h2 className="text-3xl font-bold">
           If Query <span className="text-orange-500">Contact Us</span>
