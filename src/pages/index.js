@@ -1,6 +1,7 @@
 import About from "@/Components/About/About";
 import Achievment from "@/Components/Achievment/Achievment";
 import Bannar from "@/Components/Bannar/Bannar";
+import Cars from "@/Components/Cars/Cars";
 import DealOfTheDay from "@/Components/DealOfTheDay/DealOfTheDay";
 import Discount from "@/Components/Discount/Discount";
 import Galary from "@/Components/Galary/Galary";
@@ -13,7 +14,7 @@ const Home = () => {
   return (
     <main>
       <Bannar />
-      {/* <Cars /> */}
+      <Cars />
       <About />
       <Galary />
       <Discount />
