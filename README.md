@@ -2,7 +2,7 @@
 ## Auto Craft Client
 
 #### Server Link https://github.com/Ashraful2880/Auto-Craft-Server
-Car Sale Website:
+Car Sales Website:
 
 ### Technology Used
 
