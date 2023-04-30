@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { BsFillSendFill } from "react-icons/bs";
 
-
 const ContactForm = () => {
   const {
     register,
