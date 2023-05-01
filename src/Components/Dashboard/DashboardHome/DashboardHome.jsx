@@ -5,7 +5,7 @@ const DashboardHome = () => {
   const { user, admin } = useFirebase();
 
   return (
-    <div className="dashborad-home min-h-screen overflow-hidden">
+    <div className="dashborad-home min-h-screen overflow-hidden pt-8">
       <div
         className="flex flex-col items-center justify-center w-full lg:h-[50vh] h-full"
         data-aos="flip-left"
