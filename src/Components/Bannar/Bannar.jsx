@@ -55,7 +55,7 @@ const Bannar = () => {
                 alt={slide.heading}
                 className="h-full w-full object-cover object-center"
               />
-              <div className="absolute lg:top-52 lg:left-[200px] md:left-[180px] left-[50px] flex flex-col justify-center text-left">
+              <div className="absolute lg:top-[50%] -translate-y-[50%] lg:left-[200px] md:left-[180px] left-[50px] text-left">
                 <div>
                   <h1 className="lg:text-7xl md:text-6xl text-4xl font-bold text-white">
                     {slide?.heading}
