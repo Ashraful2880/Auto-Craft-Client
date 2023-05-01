@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import service1 from "../../Assests/Image/Service/service-1.png";
 import service2 from "../../Assests/Image/Service/service-2.png";
 import service3 from "../../Assests/Image/Service/service-3.png";
@@ -17,8 +17,8 @@ const services = [
 ];
 
 const Service = () => {
-    return (
-        <div className="container mx-auto min-h-screen lg:pv-6 md:pb-6 pb-0">
+  return (
+    <div className="container mx-auto min-h-screen lg:mb-6 md:mb-6 mb-0">
       <div className="text-center lg:py-6 md:py-3 py-0">
         <h2 className="text-3xl font-bold">
           Our Awesome <span className="text-orange-500">Services</span>
@@ -44,7 +44,7 @@ const Service = () => {
         ))}
       </div>
     </div>
-    );
+  );
 };
 
 export default Service;
