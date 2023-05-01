@@ -2,10 +2,12 @@ import About from "@/Components/About/About";
 import Achievment from "@/Components/Achievment/Achievment";
 import Bannar from "@/Components/Bannar/Bannar";
 import Blogs from "@/Components/Blogs/Blogs";
+import Branches from "@/Components/Branches/Branches";
 import Cars from "@/Components/Cars/Cars";
 import DealOfTheDay from "@/Components/DealOfTheDay/DealOfTheDay";
 import Discount from "@/Components/Discount/Discount";
 import Galary from "@/Components/Galary/Galary";
+import Service from "@/Components/Service/Service";
 import Testimonial from "@/Components/Testimonial/Testimonial";
 import { useState } from "react";
 import ScrollTrigger from "react-scroll-trigger";
@@ -27,6 +29,8 @@ const Home = () => {
       </ScrollTrigger>
       <DealOfTheDay />
       <Testimonial />
+      <Service />
+      <Branches />
       <Blogs />
     </main>
   );
